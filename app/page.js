@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import Medusa from "@medusa-js/medusa-js";
 
-const medusa = new Medusa({ baseUrl: "http://<IP_O_DOMINIO_DEL_SERVER>:9000", maxRetries: 3 });
+const medusa = new Medusa({ baseUrl: "http://152.53.45.229:9000", maxRetries: 3 });
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -41,7 +41,7 @@ export default function Home() {
           <div className="text-center text-zinc-500 py-20 text-sm">Caricamento contenuti da Medusa...</div>
         ) : products.length === 0 ? (
           <div className="text-center text-zinc-500 py-20 text-sm">
-            Nessun contenuto trovato. Accedi a <a href="http://<IP_O_DOMINIO_DEL_SERVER>:7000/app" className="text-zinc-300 underline">Medusa Admin</a> per aggiungere il primo prodotto/media.
+            Nessun contenuto trovato. Accedi a <a href="http://152.53.45.229:7000/app" className="text-zinc-300 underline">Medusa Admin</a> per aggiungere il primo prodotto/media.
           </div>
         ) : (
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
